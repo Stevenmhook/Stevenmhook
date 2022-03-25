@@ -1,4 +1,4 @@
-int relayPin = 9;      // LED connected to digital pin 9
+int relayPin = 9;      // Relay connected to digital pin 9
 //bool sign = false;    // Decrease or increase rate
 int rate = 1;         // Rate Divisor for speed control
 int val = 0;         // variable to store the read value
@@ -32,5 +32,5 @@ void loop()
   }
   Serial.println(val);
   analogWrite(relayPin, val);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
-  delay(60000);
+  delay(1800000);
 }
