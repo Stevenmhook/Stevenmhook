@@ -19,7 +19,7 @@ void loop()
 
 {
   if (val==0){
-  val = 255/rate;   // read the input pin
+  val = 255/rate;   // aanalogWrite values from 0 to 255. Divide by rate for variable fan speed.
   }
   else{
   val = 0;
@@ -31,6 +31,6 @@ void loop()
     }
   }
   Serial.println(val);
-  analogWrite(relayPin, val);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
+  analogWrite(relayPin, val);  
   delay(1800000);
 }
